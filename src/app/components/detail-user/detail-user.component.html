@@ -1,0 +1,51 @@
+
+<mat-list>
+    <mat-list-item>
+      <mat-icon matListIcon>portrait</mat-icon>
+      <h3 matLine> Nome </h3>
+      <p matLine>
+        <span> {{infoUser?.name}} </span>
+      </p>
+      
+    </mat-list-item>
+    <mat-list-item>
+      <mat-icon matListIcon>call</mat-icon>
+      <h3 matLine> Telefone </h3>
+      <p matLine>
+        <span> {{infoUser?.phone}} </span>
+      </p>
+      
+    </mat-list-item>
+    <mat-list-item>
+      <mat-icon matListIcon>public</mat-icon>
+      <p matLine> Site </p>
+      <p matLine>
+        <span> {{infoUser?.website}} </span>
+        <span> Site </span>
+      </p>
+      
+      
+    </mat-list-item>
+    <mat-list-item>
+      <mat-icon matListIcon>business</mat-icon>
+      <h3 matLine> {{infoUser?.company.name}} </h3>
+      <p matLine>
+        <!-- <span> {{infoUser?.company.name}} ,</span> -->
+        <span> {{infoUser?.company.catchPhrase}} ,</span>
+        <span> {{infoUser?.company.bs}} </span>
+      </p>
+      
+    </mat-list-item>
+    <mat-list-item>
+      <mat-icon matListIcon>map</mat-icon>
+      <h3 matLine> Endereço </h3>
+      <p matLine>
+        <span> {{infoUser?.address.street}}, </span>
+        <span> {{infoUser?.address.suite}} - </span>
+        <span> {{infoUser?.address.city}} - </span>
+        <span> {{infoUser?.address.zipcode}}</span>
+      </p>
+    </mat-list-item>
+</mat-list>
+
+<app-geolocalizacao [geolocalizacao]='infoUser.address.geo'></app-geolocalizacao>

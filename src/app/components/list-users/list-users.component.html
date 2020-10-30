@@ -1,0 +1,20 @@
+
+<div *ngFor="let user of users" class="mb-3 container col-md-6" >
+  <mat-accordion class="example-headers-align" multi>
+      <mat-expansion-panel >
+        <mat-expansion-panel-header>
+          <mat-panel-title class="col-md-6 row">
+            <mat-icon>account_circle</mat-icon>
+            {{user.username}}
+          </mat-panel-title>
+          <mat-panel-description>
+            {{user.email}}
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+        <app-detail-user [infoUser]='user'></app-detail-user>
+      </mat-expansion-panel>
+    </mat-accordion>
+</div>
+
+
+    
